@@ -46,8 +46,7 @@ export default function Home() {
 
     return (
       <main>
-        <div className="bg-slate-900 h-screen"></div>
-        <div id="track" className="bg-slate-700 relative h-[200vh]">
+        <div id="track" className="bg-slate-700 relative">
           <div
             id="anchor"
             className=" min-h-screen w-full bg-slate-800 top-0 sticky overflow-hidden"
@@ -56,7 +55,7 @@ export default function Home() {
               <div
                 id="card"
                 key={`item${index}`}
-                className="w-72 h-96 absolute  top-[1344px] left-1/2 transition-transform duration-300 ease-in-out"
+                className="w-72 h-96 absolute  top-[1544px] left-1/2 transition-transform duration-300 ease-in-out"
                 style={{
                   transformOrigin: "top left",
                   transform: `rotate(${
@@ -76,7 +75,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-slate-900 h-screen"></div>
       </main>
     );
   };
