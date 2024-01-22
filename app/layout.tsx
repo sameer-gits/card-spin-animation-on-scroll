@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Card spin animation on scroll",
-  description: "Card spin animation on scroll",
+  title: "Card spin animation on scroll and drag",
+  description: "Card spin animation on scroll and drag",
 };
 
 export default function RootLayout({
