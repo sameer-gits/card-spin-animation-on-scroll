@@ -14,8 +14,11 @@ export default function Home() {
       "https://images.pexels.com/photos/19149193/pexels-photo-19149193/free-photo-of-cup-of-cocoa-drink-and-an-open-book.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/13221799/pexels-photo-13221799.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/19187317/pexels-photo-19187317/free-photo-of-hidden.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "https://images.pexels.com/photos/19149193/pexels-photo-19149193/free-photo-of-cup-of-cocoa-drink-and-an-open-book.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/14426316/pexels-photo-14426316.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/19149193/pexels-photo-19149193/free-photo-of-cup-of-cocoa-drink-and-an-open-book.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "https://images.pexels.com/photos/13221799/pexels-photo-13221799.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "https://images.pexels.com/photos/19187317/pexels-photo-19187317/free-photo-of-hidden.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/13221799/pexels-photo-13221799.jpeg?auto=compress&cs=tinysrgb&w=1000",
       "https://images.pexels.com/photos/19187317/pexels-photo-19187317/free-photo-of-hidden.jpeg?auto=compress&cs=tinysrgb&w=1000",
     ];
@@ -114,34 +117,37 @@ export default function Home() {
             className=" min-h-screen w-full  top-0 sticky overflow-hidden"
           >
             {images.map((imageUrl, index) => (
-              <>
-                <div
-                  id="card"
-                  key={`item${index}`}
-                  className="w-72 h-96 absolute group/item top-[1544px] left-1/2 transition-transform duration-300 ease-in-out cursor-grab active:cursor-grabbing select-none"
-                  style={{
-                    transformOrigin: "top left",
-                    transform: `rotate(${
-                      rotation + index * (360 / images.length)
-                    }deg) translate( -50%, -350%)`,
-                  }}
+              <div
+                id="card"
+                key={`item${index}`}
+                className="w-64 custombp:h-80 custombp:top-[1260px] custombp2:h-60 custombp2:w-60 custombp2:top-[930px] h-96 absolute group/item  top-[1544px] left-1/2 transition-transform duration-300 ease-in-out cursor-grab active:cursor-grabbing select-none"
+                style={{
+                  transformOrigin: "top left",
+                  transform: `rotate(${
+                    rotation + index * (360 / images.length)
+                  }deg) translate( -50%, -350%)`,
+                }}
+              >
+                <a
+                  key={`link${index}`}
+                  href={imageUrl}
+                  className="bg-black text-white absolute uppercase tracking-wider bottom-0 opacity-0 group-hover/item:opacity-100 transition-opacity -translate-x-1/2 left-1/2 py-4 w-full text-center rounded-b-3xl shadow-2xl font-black"
                 >
-                  <a
-                    href={imageUrl}
-                    className="bg-black text-white absolute uppercase tracking-wider bottom-0 opacity-0 group-hover/item:opacity-100 transition-opacity -translate-x-1/2 left-1/2 py-4 w-full text-center rounded-b-3xl shadow-2xl font-black"
-                  >
-                    Hello World
-                  </a>
-                  <img
-                    src={imageUrl}
-                    className="object-cover rounded-3xl w-full h-full pointer-events-none select-none"
-                    alt={`item${index}`}
-                  />
-                  <p className="absolute m-0 p-0 -z-10 font-bold text-6xl tracking-tighter rounded-3xl text-gradient-custom -top-12 translate-x-1/2 right-1/2 select-none pointer-events-none">
-                    {index + 2001}
-                  </p>
-                </div>
-              </>
+                  Hello World
+                </a>
+                <img
+                  key={`image${index}`}
+                  src={imageUrl}
+                  className="object-cover rounded-3xl w-full h-full pointer-events-none select-none"
+                  alt={`item${index}`}
+                />
+                <p
+                  key={`year${index}`}
+                  className="absolute m-0 p-0 -z-10 font-bold text-6xl tracking-tighter rounded-3xl text-gradient-custom -top-12 translate-x-1/2 right-1/2 select-none pointer-events-none"
+                >
+                  {index + 2001}
+                </p>
+              </div>
             ))}
           </div>
         </div>
