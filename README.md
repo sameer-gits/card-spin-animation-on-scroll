@@ -1,4 +1,4 @@
-Card spin animation on scroll and drag In React Typescript + Tailwind CSS
+Card spin animation on scroll and drag In React Next js Typescript + Tailwind CSS
 
 View Live Demo at: https://sameer-gits.github.io/card-spin-animation-on-scroll
 
